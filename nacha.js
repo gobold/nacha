@@ -82,7 +82,7 @@ Nacha.prototype.end = function() {
     control.batchCount = self._batches.length;
     control.blockCount = blockCount;
     control.entryCount = entryCount;
-    control.entryHash = entryHash;
+    control.entryHash = `${entryHash}`.length > 10 ? `${entryHash}`.slice(-10) : entryHash;
     control.totalDebitAmount = debits;
     control.totalCreditAmount = credits;
 
