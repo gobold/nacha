@@ -89,7 +89,7 @@ Batch.prototype.control = function() {
 
     rec.serviceClassCode = '200';
     rec.entryCount = self.entries.length;
-    rec.entryHash = `${self._entry_hash}`.length > 10 ? `${self._entry_hash}`.slice(-10) : self._entry_hash;;
+    rec.entryHash = self._entry_hash;
     rec.debitAmount = self._debit;
     rec.creditAmount = self._credit;
     // fein
